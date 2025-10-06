@@ -1,0 +1,226 @@
+//grid layout
+.bento-card {
+  @include flex-colunm-center;
+  line-height: 1.1;
+  padding: $spacing-md;
+  border-radius: $radius-sm;
+  width: 100%;
+  height: 100%;
+  @include respond-to(lg) {
+    justify-content: flex-start;
+  }
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: all 1s ease;
+}
+.bento-card:hover {
+  scale: 1.02;
+  box-shadow: none;
+}
+//card1
+.card-1 {
+  background-color: $Purple-500;
+  text-align: center;
+  padding: $spacing-md;
+
+  h2 {
+    font-size: clamp(2rem, 4vw + 1.4rem, 2.2rem);
+    color: $White;
+    font-weight: 500;
+    padding: 1rem;
+  }
+  img {
+    width: 13rem;
+  }
+  p {
+    color: $Purple-100;
+    font-weight: $bold-400;
+    margin: $spacing-sm;
+  }
+  .x10 {
+    color: $Yellow-500;
+  }
+
+  @include respond-to(md) {
+    padding: $spacing-lg;
+    grid-column: span 2;
+  }
+
+  @include respond-to(lg) {
+    grid-column: 2 /4;
+    grid-row: 1;
+  }
+}
+
+//card2
+.card-2 {
+  background-color: $White;
+  color: $Black;
+  h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+  @include respond-to(lg) {
+    grid-column: 2 /3;
+    grid-row: 2/4;
+  }
+}
+//card3
+.card-3 {
+  background-color: $Yellow-500;
+  position: relative;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-bottom: 0;
+  overflow: hidden;
+  position: relative;
+  height: 221px;
+  h2 {
+    color: $Black;
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  img {
+    margin-top: 8px;
+  }
+  @include respond-to(md) {
+    img {
+      position: absolute;
+      width: 90%;
+      bottom: -4rem;
+    }
+  }
+  @include respond-to(lg) {
+    grid-column: 3 /4;
+    grid-row: 2/4;
+    height: 100%;
+  }
+}
+//card4
+.card4 {
+  background-color: $Purple-100;
+  text-align: center;
+  gap: 1rem;
+
+  color: $Black;
+  h2 {
+    font-weight: $bold-500;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  @include respond-to(md) {
+    grid-column: 3/4;
+    grid-row: 1/3;
+  }
+  @include respond-to(lg) {
+    grid-column: 4 /5;
+    grid-row: 1/4;
+    text-align: left;
+    overflow: hidden;
+    img {
+      margin-left: 100px;
+    }
+  }
+}
+.card5 {
+  background-color: hsl(256, 67%, 59%);
+  color: hsl(0, 0%, 7%);
+  text-align: center;
+  margin: 0 auto;
+  gap: 1rem;
+
+  h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 28px;
+  }
+  @include respond-to(md) {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    flex-direction: row-reverse;
+  }
+  img {
+    width: 100%;
+  }
+  @include respond-to(lg) {
+    grid-column: 3 /5;
+    grid-row: 4;
+    flex-direction: row;
+    text-align: left;
+    h2 {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+}
+.card6 {
+  background-color: $White;
+  gap: 1rem;
+  align-items: flex-start;
+  h2 {
+    font-size: 2.7rem;
+    font-weight: 500;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  img {
+    width: 11rem;
+  }
+  @include respond-to(lg) {
+    grid-column: 2 /3;
+    grid-row: 4/5;
+  }
+}
+
+.card7 {
+  background-color: $Yellow-100;
+  align-items: flex-start;
+  padding: 1.5rem;
+  h2 {
+    font-size: 1.5rem;
+    color: $Black;
+    font-weight: 500;
+  }
+  span {
+    color: $Purple-500;
+    font-style: italic;
+  }
+  img {
+    width: 10rem;
+    margin-top: 1rem;
+  }
+  @include respond-to(lg) {
+    grid-column: 1 /2;
+    grid-row: 1/3;
+  }
+}
+.card8 {
+  background-color: $Yellow-500;
+  align-items: baseline;
+  h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+  }
+  img {
+    width: 12rem;
+  }
+  @include respond-to(md) {
+    grid-column: 2;
+    grid-row: 3/5;
+    align-items: center;
+    height: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  @include respond-to(lg) {
+    grid-column: 1;
+    grid-row: 3/5;
+  }
+}

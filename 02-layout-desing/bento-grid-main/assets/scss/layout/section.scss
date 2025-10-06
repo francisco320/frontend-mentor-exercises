@@ -1,0 +1,21 @@
+.bento-grid {
+  @include flex-colunm-center;
+  margin: $spacing-sm;
+  padding: $spacing-md;
+  gap: 1rem;
+
+  @include respond-to(md) {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(4, minmax(160px, auto));
+    gap: 1rem;
+    display: grid;
+    place-content: center;
+    margin: $spacing-md;
+    padding: $spacing-lg;
+  }
+
+  @include respond-to(lg) {
+    grid-template-columns: repeat(4, 200px);
+    grid-template-rows: minmax(150px, 1fr);
+  }
+}
